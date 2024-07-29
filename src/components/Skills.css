@@ -1,0 +1,143 @@
+/* Skills.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color:#252542;
+  }
+  
+  .desc {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    color:#5e5af5;
+    font-weight: 400;
+}
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .skill {
+    border-radius: 16px;
+    padding: 18px 36px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4e7fa;
+  }
+  
+  .skill:hover{
+        box-shadow:  0px 2px 15px #5e5af5;
+        transition: box-shadow 0.5s ease;
+
+  }
+  .skill-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #252542;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    margin-top: 9px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color:#5e5af5;
+    border: 1px solid #252542;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  
+  .skill-item:hover{
+    color: #252542;
+    border-color: #5e5af5;
+  }
+  .skill-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 768px) {
+    .title {
+      margin-top: 12px;
+      font-size: 32px;
+    }
+    
+    .desc {
+      font-size: 16px;
+    }
+  
+    .skill {
+      max-width: 400px;
+      padding: 10px 36px;
+    }
+    
+    .skill-item {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Styles for very small screens */
+  @media (max-width: 500px) {
+    .skill {
+      max-width: 330px;
+      padding: 10px 36px;
+    }
+  
+    .skill-item {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* Styles for larger screens */
+  @media (min-width: 961px) {
+    .skills-container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  

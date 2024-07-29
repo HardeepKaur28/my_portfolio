@@ -1,0 +1,200 @@
+.portfolio {
+    padding: 60px 0;
+    background-color: #e4e7fa;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .heading h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+  }
+  
+  .heading h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #252542;
+  }
+  
+  .heading p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .work-list {
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .work {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .work img {
+    width: 100%;
+    height: 355px;
+    border-radius: 15px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+  
+  .work:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%);
+  }
+  
+  .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(154, 186, 255, 0.7);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    color: #fff;
+    transition: height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .layer h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .layer p {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 26px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+  
+  .view-link {
+    color: #2600ff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-link:hover {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .work:hover .layer {
+    height: 100%;
+  }
+  
+  .probtn {
+    display: block;
+    margin: 50px auto;
+    padding: 11px 16px;
+    border: 2px solid #007bff;
+    border-radius: 14px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .probtn:hover {
+    color: #fff;
+    transform: scale(1.05);
+    background: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 930px) {
+    .work-list {
+      gap: 20px;
+    }
+
+    .work img {
+        height: 300px; /* Adjust as needed */
+      }
+  }
+  
+  @media (max-width: 730px) {
+    .work {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+
+    .work img {
+        height: 250px; /* Adjust as needed */
+      }
+  }
+  
+  @media (max-width: 550px) {
+    .work {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  
+    .work img {
+      height: 270px;
+    }
+    .heading h2 {
+      font-size: 2rem;
+    }
+  
+    .heading p {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      padding: 12px 30px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .work img {
+      height: 233px;
+    }
+    .heading h3 {
+      font-size: 1.2rem;
+    }
+  
+    .heading h2 {
+      font-size: 1.8rem;
+    }
+  
+    .heading p {
+      font-size: 0.9rem;
+    }
+  }
+  

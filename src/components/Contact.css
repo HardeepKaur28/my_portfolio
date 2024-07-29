@@ -1,0 +1,249 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.c {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.c-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.c-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #252542;
+}
+
+.c-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #5e5af5;
+    font-weight: 600;
+}
+
+.c-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #e4e7fa;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 50px;
+    color: #333;
+}
+
+.c-left, .c-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-info-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.c-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.c-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.c-social-icon {
+    font-size: 1.9rem;
+    transition: 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 40px;
+}
+
+.c-social-icon:hover {
+    transform: scale(1.4);
+    border-radius: none;
+}
+
+.c-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.c-input, .c-textarea {
+    width: 100%;
+    padding: 15px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fbfbff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.c-input:focus, .c-textarea:focus {
+    border-color: #6f6af8;
+    box-shadow: 0 0 5px rgba(111, 106, 248, 0.5);
+    outline: none;
+}
+
+.c-textarea {
+    resize: none;
+}
+
+.c-button {
+    padding: 15px;
+    background-color: #6f6af8;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.c-button:hover {
+    background-color: #5e5af5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .c-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+    .c-title {
+        font-size: 3rem;
+    }
+    .c-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-wrapper {
+        padding: 30px;
+    }
+    .c-title {
+        font-size: 2.5rem;
+    }
+    .c-subtitle {
+        font-size: 1.2rem;
+    }
+    .c-input, .c-textarea {
+        font-size: 0.9rem;
+    }
+    .c-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-wrapper {
+        padding: 20px;
+        margin-left: 10px;
+    }
+    .c-title {
+        font-size: 2rem;
+    }
+    .c-subtitle {
+        font-size: 1rem;
+    }
+    .c-info-item {
+        font-size: 1rem;
+    }
+    .c-input, .c-textarea {
+        font-size: 0.8rem;
+    }
+    .c-button {
+        font-size: 1rem;
+        padding: 14px;
+    }
+    .c-social-icons {
+        gap: 23px;
+    }
+    .c-social-icon {
+        font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .c-wrapper {
+        padding: 15px;
+    }
+    .c-title {
+        font-size: 1.8rem;
+    }
+    .c-subtitle {
+        font-size: 0.9rem;
+    }
+    .c-info-item {
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .c-icon {
+        margin-right: 5px;
+    }
+    .c-input, .c-textarea {
+        font-size: 0.8rem;
+        padding: 10px;
+        
+    }
+    .c-button {
+        font-size: 0.9rem;
+        padding: 9px;
+        width: 100px;
+        margin-left: 73px;
+    }
+    .c-social-icons {
+        gap: 8px;
+    }
+    .c-social-icon {
+        font-size: 1.3rem;
+        width: 30px;
+        height: 30px;
+    }
+}
