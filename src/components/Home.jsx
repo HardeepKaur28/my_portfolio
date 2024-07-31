@@ -1,9 +1,15 @@
 import React from 'react';
 import './Home.css';
+import About from './About';
+import Education from './Education';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
 import image from '../images/i2-removebg-preview.png';
 
 const Home = () => {
   return (
+    <>
     <main className="i">
       <section className="i-left">
         <div className="i-left-wrapper">
@@ -30,6 +36,12 @@ const Home = () => {
         <img src={image} alt="Hardeep Kaur" className="i-img" />
       </section>
     </main>
+    <About />
+    <Education />
+    <Skills />
+    <Projects />
+    <Contact/>
+    </>
   );
 };
 

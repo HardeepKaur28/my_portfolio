@@ -103,12 +103,13 @@
   object-fit: cover;
   position: absolute;
   margin-left: 61px;
+  margin-top: 90px;
 }
 
 .i-bg {
   clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   background-color: #47478f;
-  height: 87%;
+  height: 100%;
   width: 96%;
   position: absolute;
   top: 0;

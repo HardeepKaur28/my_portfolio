@@ -157,6 +157,7 @@
   @media (min-width: 420px) and (max-width: 550px) {
     .about {
       min-height: 100vh;
+      width: 103%;
       padding: 3em 1em;
       background-color: #e4e7fa;
       display: flex;

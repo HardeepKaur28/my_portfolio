@@ -19,15 +19,16 @@ function App() {
    <BrowserRouter>
    <Navbar />
    <Routes>
+    
     <Route path='/' element={<Home />} />
     <Route path='/about' element={<About />} />
     <Route path='/education' element={<Education />}/>
     <Route path='/skills' element={<Skills />}/>
     <Route path='/projects' element={<Projects/>} />
     <Route path='/contact' element={<Contact/>}/>
-    {/* <Route path="*" element={<ErrorPage />}/> */}
+    <Route path="*" element={<ErrorPage />}/>
    </Routes>
-   {/* <Footer/> */}
+   <Footer/>
    </BrowserRouter>
     </>
   )

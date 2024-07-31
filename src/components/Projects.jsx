@@ -14,11 +14,12 @@ const Projects = () => {
   };
 
   const projects = [
-    { id: 1, img: p1, title: 'Social Media App', description: 'An engaging platform to connect and interact with friends.', link: 'https://yourprojectlink1.com' },
+    { id: 1, img: p1, title: 'Code Genius Scanner', description: 'Turn your text into a snazzy scannable code with a touch of tech magic! ✨📱', link: 'https://hardeepkaur28.github.io/CodeGenius/' },
     { id: 2, img: p2, title: 'E-Commerce Website', description: 'A seamless online shopping experience with a modern UI.', link: 'https://yourprojectlink2.com' },
-    { id: 3, img: p3, title: 'Portfolio Website', description: 'Showcasing my projects and skills in a personalized portfolio.', link: 'https://yourprojectlink3.com' },
-    { id: 4, img: p4, title: 'Additional Project 1', description: 'An innovative solution with cutting-edge technology.', link: 'https://yourprojectlink4.com' },
-    { id: 5, img: p5, title: 'Additional Project 2', description: 'A creative approach to solving modern problems.', link: 'https://yourprojectlink5.com' },
+    { id: 3, img: p3, title: 'Find My Stay', description: 'Your simple way to discover the perfect place to crash! 🛏️🔍', link: 'https://hardeepkaur28.github.io/FindMyStay/' },
+    { id: 3, img: p3, title: 'Time Teller', description: 'Curious about how many trips around the sun you have taken?', link: 'https://hardeepkaur28.github.io/TimeTeller/' },
+    { id: 4, img: p4, title: 'Speak Craft', description: 'SpeakCraft turns your chatter into text—because who needs a pen when you have got a voice? 🎤📜', link: 'https://hardeepkaur28.github.io/SpeakCraft/' },
+    { id: 5, img: p5, title: 'Weather App', description: ' Your go-to sidekick for dodging raindrops and sunburns with just a swipe! ☔🌞', link: 'https://hardeepkaur28.github.io/WeatherApp/' },
   ];
 
   return (

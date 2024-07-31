@@ -1,0 +1,21 @@
+.btn.primary{
+    background:#6f6af8;
+    color:#fff;
+}
+
+.text{
+
+}
+
+.center{
+    text-align: center;
+    padding-top: 5rem;
+    margin-inline: center;
+    display: block;
+    width: 100%;
+}
+
+
+.error_page h2{
+    margin-top: 3rem;
+}
