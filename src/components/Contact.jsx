@@ -53,7 +53,8 @@ const Contact = () => {
             </div>
           </div>
           <div className="c-right">
-            <form ref={formRef} onSubmit={handleSubmit} className="c-form">
+            <form ref={formRef} onSubmit={handleSubmit} className="c-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d1aabc4a-afd2-4671-b786-510d70c493f6" />
               <input type="text" placeholder="Name" name="user_name" className="c-input" />
               <input type="text" placeholder="Subject" name="user_subject" className="c-input" />
               <input type="text" placeholder="Email" name="user_email" className="c-input" />

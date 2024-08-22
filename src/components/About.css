@@ -202,7 +202,65 @@
       text-align: center;
     }
   }
+
+  @media (max-width: 419px) {
+    .about {
+      min-height: 100vh;
+      padding: 2em 1em;
+      background-color: #e4e7fa;
+      display: flex;
+      align-items: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
   
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      gap: 30px;
+      padding: 0 1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .about-photo {
+      width: 280px; /* Adjusted size for smaller screens */
+      height: 280px; /* Auto height to maintain aspect ratio */
+      margin-top: 15px;
+      margin-left: 0;
+      transition: transform 0.3s ease;
+    }
+  
+    .about-content {
+      padding: 10px;
+      text-align: center;
+      min-width: 230px; /* Adjusted minimum width */
+    }
+  
+    .heading {
+      font-size: 1.8em; /* Slightly smaller font size */
+    }
+  
+    .highlight::after {
+      left: -85px; /* Adjusted position */
+      width: 200%; /* Adjusted width */
+    }
+    p {
+      font-size: 15px; /* Smaller font size for better readability */
+      letter-spacing: 0.8px;
+      text-align: justify;
+    }
+  
+    .social-links {
+      text-align: center;
+      margin-top: 1.5em;
+    }
+  
+    .social-links a {
+      font-size: 16px; /* Smaller font size for links */
+    }
+  }
+  
+
   @media (min-width: 740px) and (max-width: 830px) {
     .about {
       min-height: 100vh;

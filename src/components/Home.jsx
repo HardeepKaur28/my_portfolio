@@ -7,6 +7,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import image from '../images/i2-removebg-preview.png';
 
+
 const Home = () => {
   return (
     <>
@@ -28,8 +29,11 @@ const Home = () => {
               are also totally visible.
             </p>
           </div>
-          <button className="cv">Download Cv</button>
+            <a href="/assets/Hardeep_resume.pdf">
+              <button className="cv">Download CV</button>
+            </a>
         </div>
+        
       </section>
       <section className="i-right">
         <div className="i-bg"></div>
