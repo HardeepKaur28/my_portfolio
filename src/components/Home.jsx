@@ -22,7 +22,7 @@ const Home = () => {
             </div>
           </div>
           <div className="i-desc">
-            <p className="text">
+            <p className="text1">
               I developed this website to publicize my work in this area that I decided to engage
               and work! Putting technology and creativity into practice is something truly
               incredible. Well then, feel free, don't leave with doubts and know that remote projects
