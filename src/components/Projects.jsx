@@ -20,7 +20,7 @@ const Projects = () => {
     { id: 3, img: p3, title: 'Time Teller', description: 'Curious about how many trips around the sun you have taken?', link: 'https://hardeepkaur28.github.io/TimeTeller/' },
     { id: 4, img: p4, title: 'Speak Craft', description: 'SpeakCraft turns your chatter into text—because who needs a pen when you have got a voice? 🎤📜', link: 'https://hardeepkaur28.github.io/SpeakCraft/' },
     { id: 5, img: p5, title: 'Weather App', description: ' Your go-to sidekick for dodging raindrops and sunburns with just a swipe! ☔🌞', link: 'https://hardeepkaur28.github.io/WeatherApp/' },
-    { id: 2, img: p2, title: 'E-Commerce Website', description: 'A seamless online shopping experience with a modern UI.', link: 'https://hardeepkaur28.github.io/magenta-lime-music-site/' },
+    { id: 2, img: p2, title: 'E-Commerce Website', description: 'A seamless online musics experience with a modern UI.', link: 'https://hardeepkaur28.github.io/magenta-lime-music-site/' },
   ];
 
   return (
