@@ -1,58 +1,107 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaGraduationCap, FaSchool, FaUserGraduate } from 'react-icons/fa';
 
 import "./Education.css";
 
 import img from "../images/email.png";
+
+const achievementDetails = {
+  bachelors: [
+    'Learned advanced programming concepts and real-world project development.',
+    'Organized hackathons and coding events.'
+  ],
+  highschool: [
+    'Excelled in science and mathematics subjects.'
+  ],
+  matric: [
+    'Demonstrated leadership as class monitor.',
+    'Won awards in quiz and debate competitions.'
+  ]
+};
+
+function Achievement({ text, detail }) {
+  const [show, setShow] = useState(false);
+  return (
+    <li className="edu-achievement-item"
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}>
+      {text}
+      {show && <span className="edu-tooltip">{detail}</span>}
+    </li>
+  );
+}
+
 const Education = () => {
   return (
     <>
     <div className="edu">
-      <p>My Journey</p>
+      <h2 className="edu-journey-title fade-in-down">My Journey</h2>
+      <div className="edu-journey-sub">A timeline of my academic growth and achievements</div>
+      <div className="edu-journey-underline"></div>
     </div>
-    <div className="timeline">
-      <div className="edu-container left-container">
-        <img src={img} alt="edu" />
-        <div className="text-box">
-          <h2>
-            "The journey of a thousand miles begins with one step."
-          </h2>
-          <p>-Lao Tzu</p>
-          <span className="left-container-arrow"></span>
+    <div className="education-modern">
+      <div className="edu-progress-line"></div>
+      <div className="edu-bg-accent"></div>
+      <div className="edu-card fade-in-up" style={{ animationDelay: '0.1s' }} onClick={e => {
+        const ripple = document.createElement('span');
+        ripple.className = 'edu-ripple';
+        ripple.style.left = `${e.nativeEvent.offsetX}px`;
+        ripple.style.top = `${e.nativeEvent.offsetY}px`;
+        e.currentTarget.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      }}>
+        <div className="edu-icon-wrapper">
+          <FaGraduationCap className="edu-icon" />
+        </div>
+        <div className="edu-content">
+          <h3 className="edu-title">Bachelor's Degree <span className="edu-badge current">Current</span></h3>
+          <span className="edu-year">2021-2025</span>
+          <p className="edu-desc">Rayat Bahra University, Mohali, Punjab (NAAC accredited). Currently pursuing B.Tech in Computer Science and Engineering.</p>
+          <ul className="edu-achievements">
+            <Achievement text="Relevant coursework: Data Structures, Algorithms, Web Development" detail={achievementDetails.bachelors[0]} />
+            <Achievement text="Active member of Coding Club" detail={achievementDetails.bachelors[1]} />
+          </ul>
         </div>
       </div>
-
-      <div className="edu-container right-container">
-      <img src={img} alt="edu" />
-        <div className="text-box">
-          <h2>
-            Bachelor's Degree
-          </h2>
-          <small>2021-2025</small>
-          <p>RAYAT BAHRA UNIVERSITY, MOHALI,PUNJAB (NAAC accreditation). <br/>I am Currently pursuing my bachelorette degree in Engineering in computer science from Punjab for the exposure and experience.</p>
-          <span className="right-container-arrow"></span>  
+      <div className="edu-card fade-in-up" style={{ animationDelay: '0.3s' }} onClick={e => {
+        const ripple = document.createElement('span');
+        ripple.className = 'edu-ripple';
+        ripple.style.left = `${e.nativeEvent.offsetX}px`;
+        ripple.style.top = `${e.nativeEvent.offsetY}px`;
+        e.currentTarget.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      }}>
+        <div className="edu-icon-wrapper">
+          <FaUserGraduate className="edu-icon" />
+        </div>
+        <div className="edu-content">
+          <h3 className="edu-title">Higher School Degree <span className="edu-badge completed">Completed</span></h3>
+          <span className="edu-year">2019-2021</span>
+          <p className="edu-desc">Meritorious School Patiala, Punjab. Science stream, 86.8% average.</p>
+          <ul className="edu-achievements">
+            <Achievement text="Top 10% of class" detail={achievementDetails.highschool[0]} />
+          </ul>
         </div>
       </div>
-
-      <div className="edu-container left-container">
-      <img src={img} alt="edu" />
-        <div className="text-box">
-          <h2>
-            Higher School Degree
-          </h2>
-          <small>2019 - 2021</small>
-          <p>MERITORIOUS SCHOOL PATIALA ,PUNJAB <br/>I Did my Higher schooling from Patiala , with average score of 86.8% in the stream science .</p><span className="left-container-arrow"></span>
+      <div className="edu-card fade-in-up" style={{ animationDelay: '0.5s' }} onClick={e => {
+        const ripple = document.createElement('span');
+        ripple.className = 'edu-ripple';
+        ripple.style.left = `${e.nativeEvent.offsetX}px`;
+        ripple.style.top = `${e.nativeEvent.offsetY}px`;
+        e.currentTarget.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      }}>
+        <div className="edu-icon-wrapper">
+          <FaSchool className="edu-icon" />
         </div>
-      </div>
-      
-      <div className="edu-container right-container">
-      <img src={img} alt="edu" />
-        <div className="text-box">
-          <h2>
-          Matriculation
-          </h2>
-          <small>2018-2019</small>
-          <p>GOVT. MODEL SCHOOL, SHERON ,SUNAM ,PUNJAB(CBSE affiliated). <br/>I Did my elementary schooling from GMSS School with a decent score of 73.4%.</p>
-          <span className="right-container-arrow"></span>
+        <div className="edu-content">
+          <h3 className="edu-title">Matriculation <span className="edu-badge completed">Completed</span></h3>
+          <span className="edu-year">2018-2019</span>
+          <p className="edu-desc">Govt. Model School, Sheron, Sunam, Punjab (CBSE). Scored 73.4%.</p>
+          <ul className="edu-achievements">
+            <Achievement text="Class Monitor" detail={achievementDetails.matric[0]} />
+            <Achievement text="Participated in inter-school quiz competitions" detail={achievementDetails.matric[1]} />
+          </ul>
         </div>
       </div>
     </div>

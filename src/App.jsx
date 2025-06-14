@@ -16,7 +16,8 @@ function App() {
   return (
     <>
    
-   <BrowserRouter>
+  <BrowserRouter basename="/my_portfolio">
+
    <Navbar />
    <Routes>
     

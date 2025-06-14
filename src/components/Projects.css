@@ -43,23 +43,74 @@
   
   .work {
     position: relative;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     flex: 1 1 calc(33.333% - 30px);
     max-width: calc(33.333% - 30px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 0;
   }
   
   .work img {
     width: 100%;
     height: 355px;
-    border-radius: 15px;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    border-radius: 20px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: cover;
   }
   
-  .work:hover img {
-    transform: scale(1.1);
-    filter: brightness(70%);
+  .work-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05)
+    );
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .work-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.05)
+    );
+    z-index: -1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   
   .layer {
@@ -68,53 +119,121 @@
     left: 0;
     width: 100%;
     height: 0;
-    background: rgba(154, 186, 255, 0.7);
-    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.95) 100%);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 30px;
     text-align: center;
     color: #fff;
-    transition: height 0.5s ease, opacity 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 32px rgba(0, 123, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    opacity: 0;
+    overflow: hidden;
   }
   
-  .layer h3 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+  .layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
   
   .layer p {
-    font-size: 1rem;
-    line-height: 1.3;
-    margin-bottom: 26px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.1s;
+    font-weight: 400;
+    max-width: 90%;
   }
   
-  .view-link {
-    color: #2600ff;
-    font-size: 1.8rem;
-    text-decoration: none;
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, color 0.3s ease;
+  .work:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   }
   
-  .view-link:hover {
-    background: #007bff;
-    color: #fff;
+  .work:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+  }
+  
+  .work:hover .work-title {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
   }
   
   .work:hover .layer {
     height: 100%;
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0.95) 100%);
+    box-shadow: 0 16px 64px rgba(0, 123, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .work:hover .layer::before {
+    opacity: 1;
+  }
+  
+  .work:hover .layer p {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .layer h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 4px 16px #6f6af8cc, 0 2px 8px #6f6af855;
+    z-index: 4;
+    position: relative;
+  }
+  .layer .project-tags {
+    margin-bottom: 12px;
+    z-index: 4;
+    position: relative;
+  }
+  
+  .view-link {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .view-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
   }
   
   .probtn {
@@ -182,6 +301,13 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .work-title {
+        font-size: 1.6rem;
+        padding: 18px;
+    }
+  }
+  
   @media (max-width: 480px) {
     .work img {
       height: 233px;
@@ -196,6 +322,10 @@
   
     .heading p {
       font-size: 0.9rem;
+    }
+    .work-title {
+        font-size: 1.4rem;
+        padding: 15px;
     }
   }
   
